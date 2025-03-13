@@ -74,6 +74,9 @@
    javac -cp "lib/*" -d out src/*.java
 
    java -cp "out;lib/*" Window
+   ```
+   ✅ Mac/Linux の場合: out;lib/* → "out:lib/*" に変更
+
 ※起動後すぐにゲームがスタートします。
 
 **注**: 1回目のゲームスタート時にフリーズする場合があります。その際は一度ウィンドウを閉じ、再起動を試してください。
