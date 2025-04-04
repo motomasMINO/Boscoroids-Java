@@ -7,7 +7,9 @@
 複数のパワーアップアイテムを駆使し、高得点を目指しましょう！
 
 ![タイトル](Screenshot1.png)
+
 ![ゲームプレイ1](Screenshot2.png)
+
 ![ゲームプレイ2](Screenshot3.png)
 
 ## 特徴
