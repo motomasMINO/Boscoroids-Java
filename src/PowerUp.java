@@ -3,6 +3,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
+// パワーアップアイテム用のクラス
 public class PowerUp extends MovingObject {
     
     private long duration;
@@ -22,6 +23,7 @@ public class PowerUp extends MovingObject {
         explosion = new Sound(Assets.explosion);
     }
 
+    // プレイヤーがパワーアップを取得したときの処理
     void executeAction() {
         action.doAction();
         powerUpPick.play();
@@ -32,6 +34,7 @@ public class PowerUp extends MovingObject {
         angle += 0.1;
         duration += dt;
 
+        // パワーアップの効果時間が終了したら、オブジェクトを破壊して爆発音を再生
         if(duration > Constants.POWER_UP_DURATION) {
             this.Destroy();
             explosion.play();
@@ -44,6 +47,7 @@ public class PowerUp extends MovingObject {
     public void draw(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
+        // パワーアップのテクスチャを回転させて描画
         at = AffineTransform.getTranslateInstance(position.getX() + Assets.orb.getWidth()/2 - typeTexture.getWidth()/2,
                                                   position.getY() + Assets.orb.getHeight()/2 - typeTexture.getHeight()/2);
 

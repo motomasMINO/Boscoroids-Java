@@ -1,5 +1,6 @@
 import java.awt.image.BufferedImage;
 
+// パワーアップの種類を定義する列挙型
 public enum PowerUpTypes {
     SHIELD("SHIELD", Assets.shield), // 防御シールド
     LIFE("+1 LIFE", Assets.specialFlag), // 1UP
@@ -11,6 +12,7 @@ public enum PowerUpTypes {
     public String text;
     public BufferedImage texture;
 
+    // コンストラクタ
     private PowerUpTypes(String text, BufferedImage texture) {
         this.text = text;
         this.texture = texture;

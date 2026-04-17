@@ -1,6 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+// スコアデータを管理するクラス
 public class ScoreData {
     private String date;
     private int score;
@@ -8,15 +9,15 @@ public class ScoreData {
     public ScoreData(int score) {
         this.score = score;
 
-        Date today = new Date(System.currentTimeMillis());
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date today = new Date(System.currentTimeMillis()); // 現在の日付を取得
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd"); // 日付のフォーマットを指定
         date = format.format(today);
     }
 
-    public ScoreData() {
+    // デフォルトコンストラクタ（引数なし）も用意しておく
+    public ScoreData() {}
 
-    }
-
+    // ゲッターとセッター
     public String getDate() {
         return date;
     }

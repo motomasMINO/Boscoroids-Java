@@ -1,9 +1,10 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+// キーボードの入力を管理するクラス(キーコンフィグ)
 public class KeyBoard implements KeyListener {
     
-    private boolean[] keys = new boolean[256];
+    private boolean[] keys = new boolean[256]; // キーの状態を管理する配列(256はキーコードの最大値)
     
     public static boolean UP, LEFT, RIGHT, SHOOT;
 

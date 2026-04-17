@@ -3,13 +3,13 @@ import java.awt.FontFormatException;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
-
 import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
+// 画像、フォント、サウンドを読み込むためのクラス
 public class Loader {
     public static BufferedImage ImageLoader(String path) {
         try {

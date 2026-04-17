@@ -1,13 +1,13 @@
 import java.awt.Font;
 import java.awt.image.BufferedImage;
-
 import javax.sound.sampled.Clip;
 
+// ゲーム内で使用する画像、フォント、サウンドを管理するクラス
 public class Assets {
 
-   public static boolean loaded = false;
-   public static float count = 0;
-   public static float MAX_COUNT = 57;
+   public static boolean loaded = false; // 画像やサウンドがすでに読み込まれているかどうかを示すフラグ
+   public static float count = 0; // 読み込んだ画像やサウンドの数をカウントするための変数
+   public static float MAX_COUNT = 57; // 読み込むべき画像やサウンドの総数を定数として定義
 
     // 自機
     public static BufferedImage player;
@@ -67,11 +67,11 @@ public class Assets {
         fontMed = Loader.loadFont("/resources/fonts/arcadeFont.ttf", 20);
 
         // シールド画像読み込み
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 3; i++) // 3段階のシールドエフェクトを読み込む
            shieldEffect[i] = loadImage("/resources/images/shield" + (i + 1) + ".png");
 
         // 隕石画像読み込み
-        for(int i = 0; i < bigs.length; i++)
+        for(int i = 0; i < bigs.length; i++) // 4種類の大きな隕石を読み込む
            bigs[i] = Loader.ImageLoader("/resources/images/big" + (i + 1) + ".png");
 
         for(int i = 0; i < meds.length; i++)
@@ -84,11 +84,11 @@ public class Assets {
            //tinies[i] = Loader.ImageLoader("./tiny" + (i + 1) + ".png");
         
         // 爆発画像読み込み
-        for(int i = 0; i < exp.length; i++)
+        for(int i = 0; i < exp.length; i++) // 9段階の爆発エフェクトを読み込む
            exp[i] = Loader.ImageLoader("/resources/images/" + "exp" + i + ".png");
         
         // スコア数字画像読み込み   
-        for(int i = 0; i < numbers.length; i++)
+        for(int i = 0; i < numbers.length; i++) // 0から10までの数字画像を読み込む
            numbers[i] = Loader.ImageLoader("/resources/images/" + i + ".png");
 
         // サウンド読み込み   

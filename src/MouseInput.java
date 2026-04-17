@@ -1,10 +1,11 @@
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+// マウス入力を処理するクラス
 public class MouseInput extends MouseAdapter {
 
     public static int X, Y;
-    public static boolean MLB;
+    public static boolean MLB; // 左クリックが押されているかどうかを示すフラグ
 
     @Override
     public void mousePressed(MouseEvent e) {

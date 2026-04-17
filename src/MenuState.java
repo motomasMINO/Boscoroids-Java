@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
+// メニュー画面の状態を表すクラス
 public class MenuState extends State {
 
     private ArrayList<Button> buttons;
@@ -70,6 +71,7 @@ public class MenuState extends State {
 
         Graphics2D g2d = (Graphics2D)g;
 
+        // タイトルの描画
         Text.drawText(g2d, "BOSCOROIDS", new Vector2D(Constants.WIDTH/2, Constants.HEIGHT/2 - 100), 
         true, Color.RED, font);
     }

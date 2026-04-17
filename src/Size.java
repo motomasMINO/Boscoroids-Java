@@ -1,5 +1,6 @@
 import java.awt.image.BufferedImage;
 
+// 隕石のサイズを表す列挙型
 public enum Size {
     BIG(2, Assets.meds), MED(2, Assets.smalls), SMALL(0, null);
 
